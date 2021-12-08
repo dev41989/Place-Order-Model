@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>
+            Modify data
+         </title>   
+    </head>
+    <body>
+        <form name = 'Update' method = 'POST' action='/updated/'>
+
+            {% csrf_token %}
+        <table>
+            <tr>
+            <td>    
+            <h1>Person Detail</h1>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    Update Record Id :-
+                </td>   
+            <td>
+
+                <input type = 'text' name = 'id' value='{{Moddata.id}}'>
+            </td>
+            </tr>
+            </tr>    
+            
+                <tr>
+                    <td>
+                        <h3>First Name</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'First name' value = '{{Moddata.order.Firstname}}'>
+                     </td>
+                     <td>
+                        <h3>Last Name</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Last name' value = '{{Moddata.order.Lastname}}'>
+                     </td>
+
+                </tr> 
+                
+                <tr>
+                    <td>
+                        <h3>Email</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Email' value = '{{Moddata.order.Email}}'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>    
+                    <h1>Address Detail</h1>
+                    </td>
+                </tr> 
+                
+                <tr>
+                    <td>
+                        <h3>Street</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Street' value = '{{Moddata.order.Address_street}}'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Landmark</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Landmark' value = '{{Moddata.order.Address_landmark}}'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Postal Code</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Postal Code' value = '{{Moddata.order.Address_pincode}}'>
+                     </td>
+                </tr>
+                
+                <tr>
+                    <td>    
+                    <h1>Order Detail</h1>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>
+                        <h3>product</h3>
+                     </td>
+                     <td>
+                         <select name = 'Data'>
+                            <option value="{{Moddata.product.name}}">{{Moddata.product.name}}</option>
+                         </select>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Quantity</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Quantity' value='{{Moddata.Quantity}}'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Price</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Price' value='{{Moddata.price}}'>
+                     </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <input type = 'submit' value ='Edit Order'>
+                     </td>
+                </tr>  
+
+
+        </table>
+        </form>
+        
+    </body>
+</html>

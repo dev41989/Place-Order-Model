@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>
+            Order Page
+         </title>   
+    </head>
+    <body>
+        <form name = record method = 'POST' action="/record/">
+
+            {% csrf_token %}
+        <table>
+            <tr>
+            <td>    
+            <h1>Person Detail</h1>
+            </td>
+            </tr>    
+            
+                <tr>
+                    <td>
+                        <h3>First Name</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'First name'>
+                     </td>
+                     <td>
+                        <h3>Last Name</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Last name'>
+                     </td>
+
+                </tr> 
+                
+                <tr>
+                    <td>
+                        <h3>Email</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Email'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>    
+                    <h1>Address Detail</h1>
+                    </td>
+                </tr> 
+                
+                <tr>
+                    <td>
+                        <h3>Street</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Street'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Landmark</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Landmark'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Postal Code</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Postal Code'>
+                     </td>
+                </tr>
+                
+                <tr>
+                    <td>    
+                    <h1>Order Detail</h1>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>
+                        <h3>product</h3>
+                     </td>
+                     <td>
+                         <select name = 'Data'>
+                        {% for data in ProductList %}
+                            <option value="{{data.name}}">{{data.name}}</option>
+                        {% endfor %}
+                         </select>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Quantity</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Quantity'>
+                     </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Price</h3>
+                     </td>
+                     <td>
+                        <input type = 'text' name = 'Price'>
+                     </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <input type = 'submit'>
+                     </td>
+                     <td>
+                        <input type = 'submit', value = 'Cancel'>
+                     </td>
+                </tr>  
+
+
+        </table>
+        </form>
+        
+    </body>
+</html>
