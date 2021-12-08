@@ -20,7 +20,7 @@
                 </td>   
             <td>
 
-                <input type = 'text' name = 'id' value='{{Moddata.id}}'>
+                <input type = 'text' name = 'id' value='{{modify_data.id}}'>
             </td>
             </tr>
             </tr>    
@@ -30,13 +30,13 @@
                         <h3>First Name</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'First name' value = '{{Moddata.order.Firstname}}'>
+                        <input type = 'text' name = 'first_name' value = '{{modify_data.order.firstname}}'>
                      </td>
                      <td>
                         <h3>Last Name</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Last name' value = '{{Moddata.order.Lastname}}'>
+                        <input type = 'text' name = 'last_name' value = '{{modify_data.order.lastname}}'>
                      </td>
 
                 </tr> 
@@ -46,7 +46,7 @@
                         <h3>Email</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Email' value = '{{Moddata.order.Email}}'>
+                        <input type = 'text' name = 'email' value = '{{modify_data.order.email}}'>
                      </td>
                 </tr>
 
@@ -61,7 +61,7 @@
                         <h3>Street</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Street' value = '{{Moddata.order.Address_street}}'>
+                        <input type = 'text' name = 'street' value = '{{modify_data.order.address_street}}'>
                      </td>
                 </tr>
 
@@ -70,7 +70,7 @@
                         <h3>Landmark</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Landmark' value = '{{Moddata.order.Address_landmark}}'>
+                        <input type = 'text' name = 'landmark' value = '{{modify_data.order.address_landmark}}'>
                      </td>
                 </tr>
 
@@ -79,7 +79,7 @@
                         <h3>Postal Code</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Postal Code' value = '{{Moddata.order.Address_pincode}}'>
+                        <input type = 'text' name = 'postal_code' value = '{{modify_data.order.address_pincode}}'>
                      </td>
                 </tr>
                 
@@ -94,8 +94,8 @@
                         <h3>product</h3>
                      </td>
                      <td>
-                         <select name = 'Data'>
-                            <option value="{{Moddata.product.name}}">{{Moddata.product.name}}</option>
+                         <select name = 'data'>
+                            <option value="{{modify_data.product.name}}">{{modify_data.product.name}}</option>
                          </select>
                      </td>
                 </tr>
@@ -105,7 +105,7 @@
                         <h3>Quantity</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Quantity' value='{{Moddata.Quantity}}'>
+                        <input type = 'text' name = 'quantity' value='{{modify_data.quantity}}'>
                      </td>
                 </tr>
 
@@ -114,14 +114,14 @@
                         <h3>Price</h3>
                      </td>
                      <td>
-                        <input type = 'text' name = 'Price' value='{{Moddata.price}}'>
+                        <input type = 'text' name = 'price' value='{{modify_data.price}}'>
                      </td>
                 </tr>
 
 
                 <tr>
                     <td>
-                        <input type = 'submit' value ='Edit Order'>
+                        <input type = 'submit' value ='edit order'>
                      </td>
                 </tr>  
 

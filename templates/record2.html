@@ -25,27 +25,32 @@
                 <td>
                 </td>
             </tr>
-            {% for viewdata in orderdata %}
+            {% for view_data in orderdata %}
             <tr>
                 <td>
-                    {{viewdata.order.Firstname}}
+                    {{view_data.order.firstname}}
                 </td>
                 <td>
-                    {{viewdata.order.Address_street}} &nbsp;{{viewdata.order.Address_landmark}}
-                    &nbsp;{{viewdata.order.Address_pincode}}
+                    {{view_data.order.address_street}} &nbsp;{{view_data.order.address_landmark}}
+                    &nbsp;{{view_data.order.address_pincode}}
                 </td>
                 <td>
-                    {{viewdata.product.name}}   
+                    {{view_data.product.name}}   
                 </td>
                 <td>
-                    {{viewdata.Quantity}}
+                    {{view_data.quantity}}
                 </td>
                 <td>
-                    {{viewdata.price}}
+                    {{view_data.price}}
                 </td>
 
-                <td>   <a href="/order/"> <button> Edit </button> </a>
-                </a href="/remain/" ><button> Delete </button></a>
+                <td>   
+                    <!--
+                       <a href="/order/"> <button> Edit </button> </a>
+                       </a href="/remain/" ><button> Delete </button></a> -->
+
+                       <a href="{% url 'Modifydata' view_data.id %}" > <button> Edit </button> </a>
+                       <a href = "{% url 'remain' view_data.id %}" ><button> Delete </button></a>
                 </td>
             </tr> 
             {% endfor %}

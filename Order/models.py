@@ -1,13 +1,13 @@
 from django.db import models
 from datetime import datetime
 
-class order(models.Model):
-    Firstname = models.CharField(max_length=100)
-    Lastname = models.CharField(max_length=100)
-    Email = models.EmailField()
-    Address_street = models.TextField()
-    Address_landmark = models.TextField()
-    Address_pincode = models.TextField()
+class Order(models.Model):
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    email = models.EmailField()
+    address_street = models.TextField()
+    address_landmark = models.TextField()
+    address_pincode = models.TextField()
 
 
 class Product(models.Model):
@@ -15,8 +15,8 @@ class Product(models.Model):
 
 class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    order = models.ForeignKey(order, on_delete = models.CASCADE)
-    Quantity = models.IntegerField()
+    order = models.ForeignKey(Order, on_delete = models.CASCADE)
+    quantity = models.IntegerField()
     price = models.IntegerField()
 
     def get_absolute_url(self):
